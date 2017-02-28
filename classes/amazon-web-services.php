@@ -1,5 +1,5 @@
 <?php
-use Aws\Common\Aws;
+use Aws\Sdk;
 
 class Amazon_Web_Services extends AWS_Plugin_Base {
 
@@ -309,7 +309,7 @@ class Amazon_Web_Services extends AWS_Plugin_Base {
 			}
 
 			$args         = apply_filters( 'aws_get_client_args', $args );
-			$this->client = Aws::factory( $args );
+			$this->client = new Aws\Sdk( $args );
 		}
 
 		return $this->client;

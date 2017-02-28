@@ -44,7 +44,8 @@ function amazon_web_services_require_files() {
 	$abspath = dirname( __FILE__ );
 	require_once $abspath . '/classes/aws-plugin-base.php';
 	require_once $abspath . '/classes/amazon-web-services.php';
-	require_once $abspath . '/vendor/aws/aws-autoloader.php';
+	//require_once $abspath . '/vendor/aws/aws-autoloader.php';
+	require_once $abspath . '/vendor/autoload.php';
 }
 
 function amazon_web_services_init() {
